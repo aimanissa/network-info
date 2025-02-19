@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="txt_tx_max_speed">Max Supported TX</string>
+    <string name="txt_rx_link_speed">Rx LinkSpeed</string>
+    <string name="txt_link_speed">LinkSpeed</string>
+    <string name="txt_frequency">Frequency</string>
+    <string name="txt_channel">Channel</string>
+    <string name="txt_wifi_standard">WiFi standard</string>
+    <string name="txt_gateway">Gateway</string>
+    <string name="txt_ip">IP</string>
+    <string name="txt_public_ip">Public IP</string>
+    <string name="txt_dns">Dns</string>
+    <string name="txt_net_mask">Net Mask</string>
+</resources>
