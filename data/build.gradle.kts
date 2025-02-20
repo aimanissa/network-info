@@ -5,10 +5,10 @@ plugins {
 
 android {
     namespace = "com.aimanissa.networkinfo.data"
-    compileSdk = 35
+    compileSdk = Versions.COMPILE_SDK
 
     defaultConfig {
-        minSdk = 24
+        minSdk = Versions.MIN_SDK
     }
 
     buildTypes {
@@ -33,7 +33,7 @@ android {
 }
 
 dependencies {
-    implementation(project(":domain"))
+    implementation(project(Modules.DOMAIN))
 
     implementation(platform(libs.koin.bom))
     implementation(libs.bundles.koin)

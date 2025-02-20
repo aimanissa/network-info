@@ -6,10 +6,10 @@ plugins {
 
 android {
     namespace = "com.aimanissa.base.navigation.internal"
-    compileSdk = 35
+    compileSdk = Versions.COMPILE_SDK
 
     defaultConfig {
-        minSdk = 24
+        minSdk = Versions.MIN_SDK
     }
 
     buildTypes {
@@ -41,12 +41,12 @@ android {
 }
 
 dependencies {
-    implementation(project(":base:core"))
-    implementation(project(":base:extensions"))
-    implementation(project(":base:navigation:api"))
-    implementation(project(":base:theme"))
+    implementation(project(Modules.Base.CORE))
+    implementation(project(Modules.Base.EXTENSIONS))
+    implementation(project(Modules.Base.Navigation.API))
+    implementation(project(Modules.Base.THEME))
 
-    implementation(project(":features:connection"))
+    implementation(project(Modules.Features.CONNECTION))
 
     implementation(platform(libs.androidx.compose.bom))
     implementation(libs.androidx.compose.navigation)

@@ -6,10 +6,10 @@ plugins {
 
 android {
     namespace = "com.aimanissa.base.navigation.api"
-    compileSdk = 35
+    compileSdk = Versions.COMPILE_SDK
 
     defaultConfig {
-        minSdk = 24
+        minSdk = Versions.MIN_SDK
     }
 
     buildTypes {

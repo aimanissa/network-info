@@ -6,14 +6,14 @@ plugins {
 
 android {
     namespace = "com.aimanissa.networkinfo"
-    compileSdk = 35
+    compileSdk = Versions.COMPILE_SDK
 
     defaultConfig {
-        applicationId = "com.aimanissa.networkinfo"
-        minSdk = 24
-        targetSdk = 35
-        versionCode = 1
-        versionName = "1.0"
+        applicationId = Versions.APPLICATION_ID
+        minSdk = Versions.MIN_SDK
+        targetSdk = Versions.TARGET_SDK
+        versionCode = Versions.VERSION_CODE
+        versionName = Versions.VERSION_NAME
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -46,10 +46,10 @@ android {
 }
 
 dependencies {
-    implementation(project(":base:navigation:api"))
-    implementation(project(":base:navigation:internal"))
-    implementation(project(":base:theme"))
-    implementation(project(":base:core"))
+    implementation(project(Modules.Base.Navigation.API))
+    implementation(project(Modules.Base.Navigation.INTERNAL))
+    implementation(project(Modules.Base.THEME))
+    implementation(project(Modules.Base.CORE))
 
     implementation(platform(libs.androidx.compose.bom))
     implementation(libs.androidx.activity.compose)
