@@ -34,9 +34,9 @@ android {
 
 dependencies {
     implementation(project(Modules.DOMAIN))
+    implementation(project(Modules.Base.EXTENSIONS))
 
-    implementation(platform(libs.koin.bom))
-    implementation(libs.bundles.koin)
+    implementation(libs.bundles.coroutines)
 
     implementation(libs.timber)
 }

@@ -5,6 +5,7 @@ import androidx.lifecycle.LifecycleOwner
 import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
 import arrow.core.Either
+import kotlinx.coroutines.CancellableContinuation
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.channels.Channel
 import kotlinx.coroutines.channels.ReceiveChannel
@@ -12,6 +13,7 @@ import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.catch
 import kotlinx.coroutines.launch
+import kotlin.coroutines.resume
 
 inline fun <T> Flow<T>.launchAndCollectIn(
     owner: LifecycleOwner,
@@ -44,5 +46,11 @@ fun <T> T?.trySendFromChannel(): ReceiveChannel<T?> {
         this@trySendFromChannel?.let { value ->
             this.trySend(value)
         }
+    }
+}
+
+fun <T> CancellableContinuation<T>.resumeIfActive(value: T) {
+    if (isActive) {
+        resume(value)
     }
 }

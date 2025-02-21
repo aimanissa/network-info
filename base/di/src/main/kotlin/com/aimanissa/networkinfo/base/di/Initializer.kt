@@ -1,4 +1,4 @@
-package com.aimanissa.base.core.di
+package com.aimanissa.networkinfo.base.di
 
 import org.koin.core.module.Module
 

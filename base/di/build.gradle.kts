@@ -4,7 +4,7 @@ plugins {
 }
 
 android {
-    namespace = "com.aimanissa.base.core"
+    namespace = "com.aimanissa.networkinfo.base.di"
     compileSdk = Versions.COMPILE_SDK
 
     defaultConfig {
@@ -34,14 +34,11 @@ android {
 }
 
 dependencies {
-    implementation(libs.androidx.compose.navigation)
-    implementation(libs.androidx.compose.runtime)
-    implementation(libs.androidx.compose.material)
-    implementation(libs.androidx.compose.ui.tooling.preview)
-    debugImplementation(libs.androidx.compose.ui.tooling)
+    implementation(project(Modules.DOMAIN))
+    implementation(project(Modules.DATA))
+    implementation(project(Modules.Base.Navigation.API))
+    implementation(project(Modules.Base.Navigation.INTERNAL))
 
     implementation(platform(libs.koin.bom))
-    implementation(libs.bundles.koin)
-
-    implementation(libs.timber)
+    implementation(libs.koin.core)
 }

@@ -7,6 +7,7 @@ object Modules {
     object Base {
         private const val MODULE_NAME = ":base"
         const val CORE = "$MODULE_NAME:core"
+        const val DI = "$MODULE_NAME:di"
         const val EXTENSIONS = "$MODULE_NAME:extensions"
         const val THEME = "$MODULE_NAME:theme"
 

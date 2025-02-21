@@ -1,6 +1,7 @@
 package com.aimanissa.networkinfo
 
 import android.app.Application
+import com.aimanissa.features.connection.di.connectionModule
 import org.koin.android.ext.koin.androidContext
 import org.koin.android.ext.koin.androidLogger
 import org.koin.core.context.startKoin
@@ -26,6 +27,7 @@ class BaseApp : Application() {
             modules(
                 listOf(
                     appModule,
+                    connectionModule,
                 )
             )
         }

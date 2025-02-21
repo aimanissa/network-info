@@ -50,6 +50,9 @@ dependencies {
     implementation(project(Modules.Base.Navigation.INTERNAL))
     implementation(project(Modules.Base.THEME))
     implementation(project(Modules.Base.CORE))
+    implementation(project(Modules.Base.DI))
+
+    implementation(project(Modules.Features.CONNECTION))
 
     implementation(platform(libs.androidx.compose.bom))
     implementation(libs.androidx.activity.compose)

@@ -1,5 +1,3 @@
-import com.android.tools.r8.V
-
 plugins {
     alias(libs.plugins.android.library)
     alias(libs.plugins.kotlin.android)
@@ -47,6 +45,8 @@ dependencies {
     implementation(project(Modules.Base.EXTENSIONS))
     implementation(project(Modules.Base.Navigation.API))
     implementation(project(Modules.Base.THEME))
+
+    implementation(project(Modules.DOMAIN))
 
     implementation(platform(libs.androidx.compose.bom))
     implementation(libs.androidx.compose.foundation)

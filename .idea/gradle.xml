@@ -24,6 +24,7 @@
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/base" />
             <option value="$PROJECT_DIR$/base/core" />
+            <option value="$PROJECT_DIR$/base/di" />
             <option value="$PROJECT_DIR$/base/extensions" />
             <option value="$PROJECT_DIR$/base/navigation" />
             <option value="$PROJECT_DIR$/base/navigation/api" />

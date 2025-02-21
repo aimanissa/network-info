@@ -1,6 +1,5 @@
-package com.aimanissa.base.navigation.di
+package com.aimanissa.networkinfo.base.di
 
-import com.aimanissa.base.core.di.Initializer
 import com.aimanissa.base.navigation.domain.Navigator
 import com.aimanissa.base.navigation.domain.ScreenProvider
 import com.aimanissa.base.navigation.domain.NavigatorImpl

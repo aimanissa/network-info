@@ -45,6 +45,7 @@ dependencies {
     implementation(project(Modules.Base.EXTENSIONS))
     implementation(project(Modules.Base.Navigation.API))
     implementation(project(Modules.Base.THEME))
+    implementation(project(Modules.Base.DI))
 
     implementation(project(Modules.Features.CONNECTION))
 

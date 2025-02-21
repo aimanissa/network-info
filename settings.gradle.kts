@@ -25,6 +25,7 @@ include(
     ":data",
     ":domain",
     ":base:core",
+    ":base:di",
     ":base:extensions",
     ":base:theme",
     ":base:navigation:api",

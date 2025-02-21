@@ -3,19 +3,7 @@ package com.aimanissa.features.connection.ui
 import com.aimanissa.base.core.platform.BaseViewState
 import com.aimanissa.base.core.platform.DataEvent
 import com.aimanissa.features.connection.R
-
-//enum class WifiDetails(@StringRes val text: Int) {
-//    TxRxSpeed(R.string.txt_tx_rx_speed),
-//    LinkSpeed(R.string.txt_link_speed),
-//    Frequency(R.string.txt_frequency),
-//    Channel(R.string.txt_channel),
-//    Standard(R.string.txt_wifi_standard),
-//    Gateway(R.string.txt_gateway),
-//    Ip(R.string.txt_ip),
-//    PublicIp(R.string.txt_public_ip),
-//    Dns(R.string.txt_dns),
-//    NetMask(R.string.txt_net_mask),
-//}
+import com.aimanissa.networkinfo.domain.models.WifiAccessPoint
 
 private val wifiDetailsTitle = listOf(
     R.string.txt_tx_max_speed,
@@ -33,14 +21,11 @@ private val wifiDetailsTitle = listOf(
 
 
 data class ViewState(
-    val wifiDetails: List<Any>? = null
+    val wifiDetails: List<WifiAccessPoint> = emptyList()
 ) : BaseViewState() {
     val titles = wifiDetailsTitle
 }
 
-sealed interface SplashDataEvent : DataEvent {
-    object StartTimer : SplashDataEvent
-    object StopTimer : SplashDataEvent
-    object StartDelayFowShowLogo : SplashDataEvent
-    object ShowLogo : SplashDataEvent
+sealed interface ConnectionDataEvent : DataEvent {
+    data class OnWifiAccessPointsReceived(val statuses: List<WifiAccessPoint>) : ConnectionDataEvent
 }
