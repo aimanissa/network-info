@@ -38,6 +38,7 @@ dependencies {
     implementation(project(Modules.DATA))
     implementation(project(Modules.Base.Navigation.API))
     implementation(project(Modules.Base.Navigation.INTERNAL))
+    implementation(project(Modules.Base.CORE))
 
     implementation(platform(libs.koin.bom))
     implementation(libs.koin.core)

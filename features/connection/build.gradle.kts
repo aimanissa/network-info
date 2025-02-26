@@ -55,6 +55,8 @@ dependencies {
     implementation(libs.androidx.compose.ui.tooling.preview)
     debugImplementation(libs.androidx.compose.ui.tooling)
 
+    implementation(libs.bundles.coroutines)
+
     implementation(platform(libs.koin.bom))
     implementation(libs.bundles.koin)
 }

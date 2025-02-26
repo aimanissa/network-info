@@ -1,4 +1,4 @@
-package com.aimanissa.networkinfo.data
+package com.aimanissa.networkinfo.data.controllers.cell
 
 import android.annotation.TargetApi
 import android.content.Context

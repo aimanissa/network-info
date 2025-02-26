@@ -35,6 +35,7 @@ android {
 dependencies {
     implementation(project(Modules.DOMAIN))
     implementation(project(Modules.Base.EXTENSIONS))
+    implementation(project(Modules.Base.CORE))
 
     implementation(libs.bundles.coroutines)
 

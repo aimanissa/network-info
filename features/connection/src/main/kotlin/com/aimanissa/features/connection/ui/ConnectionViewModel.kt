@@ -19,8 +19,8 @@ class ConnectionViewModel(
 
     init {
         viewModelScope.launch {
-            connectionInteractor.getWifiAccessPoints().collect { accessPoints ->
-                processDataEvent(ConnectionDataEvent.OnWifiAccessPointsReceived(accessPoints))
+            connectionInteractor.getActiveWifiAccessPoint().collect { accessPoint ->
+                processDataEvent(ConnectionDataEvent.OnWifiAccessPointReceived(accessPoint))
             }
         }
     }
@@ -33,8 +33,8 @@ class ConnectionViewModel(
     }
 
     private fun dispatchConnectionDataEvent(event: ConnectionDataEvent): ViewState = when (event) {
-        is ConnectionDataEvent.OnWifiAccessPointsReceived -> {
-            previousState.copy(wifiDetails = event.statuses)
+        is ConnectionDataEvent.OnWifiAccessPointReceived -> {
+            previousState.copy(wifiAccessPoint = event.wifiAccessPoint)
         }
     }
 }

@@ -4,13 +4,15 @@ import com.aimanissa.networkinfo.base.di.ControllersInitializer
 import com.aimanissa.networkinfo.base.di.NavigationInitializer
 import com.aimanissa.networkinfo.base.di.InteractorsInitializer
 import com.aimanissa.networkinfo.base.di.ProvidersInitializer
+import com.aimanissa.networkinfo.base.di.RepositoriesInitializer
 import org.koin.dsl.module
 
 val modules = listOf(
     NavigationInitializer,
-    ProvidersInitializer,
-    InteractorsInitializer,
     ControllersInitializer,
+    ProvidersInitializer,
+    RepositoriesInitializer,
+    InteractorsInitializer,
 )
 
 val appModule = module {

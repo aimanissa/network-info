@@ -21,11 +21,11 @@ private val wifiDetailsTitle = listOf(
 
 
 data class ViewState(
-    val wifiDetails: List<WifiAccessPoint> = emptyList()
+    val wifiAccessPoint: WifiAccessPoint = WifiAccessPoint.createEmpty()
 ) : BaseViewState() {
     val titles = wifiDetailsTitle
 }
 
 sealed interface ConnectionDataEvent : DataEvent {
-    data class OnWifiAccessPointsReceived(val statuses: List<WifiAccessPoint>) : ConnectionDataEvent
+    data class OnWifiAccessPointReceived(val wifiAccessPoint: WifiAccessPoint) : ConnectionDataEvent
 }

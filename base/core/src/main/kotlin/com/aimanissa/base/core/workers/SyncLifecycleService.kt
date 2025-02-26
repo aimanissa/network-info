@@ -1,17 +1,9 @@
 package com.aimanissa.base.core.workers
 
-import androidx.lifecycle.DefaultLifecycleObserver
 import androidx.lifecycle.LifecycleOwner
 
-interface SyncWorker {
-    fun start()
-    fun stop()
-}
-
-interface SyncService : SyncWorker, DefaultLifecycleObserver
-
-internal class SyncServiceImpl(
-    private val workers: List<BaseSyncWorker<out Any>>
+class SyncLifecycleService(
+    private val workers: List<LifecycleSubscriptionWorker>,
 ) : SyncService {
 
     override fun start() {

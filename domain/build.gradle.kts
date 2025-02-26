@@ -16,4 +16,5 @@ kotlin {
 
 dependencies {
     implementation(libs.coroutines.core)
+    implementation(libs.arrow.core)
 }

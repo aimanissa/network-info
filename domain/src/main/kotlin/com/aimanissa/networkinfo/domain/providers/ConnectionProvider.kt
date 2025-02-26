@@ -5,7 +5,9 @@ import kotlinx.coroutines.flow.Flow
 
 interface ConnectionProvider {
 
-    val wifiAccessPoints: Flow<List<WifiAccessPoint>>
+    val activeWifiAccessPoint: Flow<WifiAccessPoint>
 
-    suspend fun updateWifiAccessPoints(accessPoints: List<WifiAccessPoint>)
+    suspend fun updateActiveWifiAccessPoint(activeAccessPoint: WifiAccessPoint)
+
+    suspend fun updateSignalStrengthDbm(rssi: Int)
 }

@@ -1,11 +1,12 @@
-package com.aimanissa.base.core.workers
+package com.aimanissa.base.core.workers.data
 
+import com.aimanissa.base.core.workers.SyncAction
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.launch
 
-abstract class BaseSyncWorker<T> : SyncWorker {
+abstract class BaseDataWorker<T> : SyncAction {
 
     private var job: Job? = null
     private val scope = CoroutineScope(Dispatchers.IO)

@@ -5,5 +5,7 @@ import kotlinx.coroutines.flow.Flow
 
 interface ConnectionRepository {
 
-    suspend fun getWifiAccessPoints(): Flow<List<WifiAccessPoint>>
+    suspend fun getActiveWifiAccessPoint(): Flow<WifiAccessPoint>
+
+    suspend fun getWifiAccessPoints(): List<WifiAccessPoint>
 }
